@@ -21,9 +21,6 @@ public class Practice {
     // do maxDiff with an array, the next question with a Set, etc.
 
 
-
-
-
     // Find the difference between the largest and smallest integer in HashSet
     // o(n)
     public static int largestMinusSmallest(Set<Integer> nums){
@@ -40,8 +37,36 @@ public class Practice {
                 smallest = num;
             }
         }
-
       return largest - smallest; 
     
     }
+    public static int largestWordCount(String[] words, char test){
+ // Find the longest word that starts with a specific character letter in array
+ // o(n)
+        int count = 0;
+        for (String word : words) {
+                if (!word.isEmpty() && word.charAt(0) == test) {   
+                
+            if (word.length() > count) { 
+                count = word.length();
+                }
+            }
+        }
+        return count;
+    }
+    
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
 }
