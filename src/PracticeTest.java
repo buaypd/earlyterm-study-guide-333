@@ -24,7 +24,7 @@ public class PracticeTest {
 
     // TODO: Make tests for each problem you solve
     @Test
-    void test() {
+    void testIfDifferneceIsMatching() {
         // Arrange
         Set<Integer> testSet = new HashSet<>();
         testSet.add(15);
@@ -39,6 +39,25 @@ public class PracticeTest {
         // Should be 15
         assertEquals(21, difference);
     }
+
+@Test
+    void testIfDifferneceIsMatching() {
+        // Arrange
+        String[] words = {"box", "ball", "apple", "balance"};
+       char testChar = 'b';
+    
+
+        // Act
+        int result = Practice.largestWordCount(words, testChar);
+
+        // Assert
+        // Should be 7
+        assertEquals(7, result);
+    }
+
+
+
+
 }
 
 
