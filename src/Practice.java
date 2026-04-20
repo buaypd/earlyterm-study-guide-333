@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Practice {
@@ -55,6 +56,38 @@ public class Practice {
         return count;
     }
     
+
+    // Count how many words are longer than n characters and shorter than m characters in arraylist
+
+    public static void counterLargest(List<String> words, int n, int m){
+        int nCounter = 0;
+        int mCounter = 0;
+
+        for (String word : words) {
+            if (n < word.length()){
+                nCounter++;
+            }
+            else if (m > word.length()) {
+                mCounter++;
+            }
+        }
+        // Count how many words are longer than n characters and shorter than m characters in arraylist
+
+    public static void counterLargest(List<String> words, int n, int m){
+        int nCounter = 0;
+        int mCounter = 0;
+
+        for (String word : words) {
+            if (word.length() > n){
+                nCounter++;
+            }
+            if (word.length() < m) {
+                mCounter++;
+            }
+        }
+        return "N Count: " + nCounter + " " + "M Count: " + mCounter;
+        }
+    }
 
 
    
