@@ -110,7 +110,7 @@ public class Practice {
         int largest = Integer.MIN_VALUE;
         int secondLargest = Integer.MIN_VALUE;
 
-        for(int num : nums){
+        for(int num : nums.keys){
             if (num > largest){
                 largest = secondLargest;
                 largest = nums;
