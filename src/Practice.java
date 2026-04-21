@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Practice {
@@ -73,7 +74,7 @@ public class Practice {
         }
         // Count how many words are longer than n characters and shorter than m characters in arraylist
 
-    public static void counterLargest(List<String> words, int n, int m){
+    public static String counterLargest(List<String> words, int n, int m){
         int nCounter = 0;
         int mCounter = 0;
 
@@ -87,6 +88,39 @@ public class Practice {
         }
         return "N Count: " + nCounter + " " + "M Count: " + mCounter;
         }
+    }
+
+    // Find the difference between the how many odd and even numbers there are in hashmap value
+    public static int counterLargest(Map<Integer> nums){
+        int oddCount = 0;
+        int evenCount = 0;
+        for(int num : nums.values()){
+            if( num % 2 == 0){
+                evenCount++;
+            }
+            else {
+                oddCount++;
+            }
+        }
+        return oddCount - evenCount;
+    }
+
+    // Find the second-largest number in the keys of a hashmap
+    public static int SecondLargest(Map<Integer> nums){
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for(int num : nums){
+            if (num > largest){
+                largest = secondLargest;
+                largest = nums;
+            }
+            else if (num > secondLargest && num != largest) {
+
+            secondLargest = num;
+            }
+        }
+        return secondLargest;
     }
 
 
